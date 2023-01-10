@@ -1,0 +1,20 @@
+<h1 i18n class="text-center mt-5 mb-5">Artists</h1>
+<div class="container mb-3">
+  <div class="row d-flex justify-content-center">
+    <div
+      class="col-md-4 d-flex justify-content-center"
+      *ngFor="let artist of artists"
+    >
+      <div class="card my-3">
+        <a href="{{ 'artists/' + artist.id }}">
+          <img
+            src="{{ artist.image.source }}"
+            class="card-img-bottom sizeImage"
+            alt="{{ artist.name }}"
+          />
+        </a>
+        <p class="card-title text-dark text-center">{{ artist.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container d-flex justify-content-center contentDetail">
+  <div class="row align-self-center">
+    <h1 class="h2 p-3">{{ artworkDetail.name }}</h1>
+    <div class="col-5">
+      <div class="thumb">
+        <div *ngIf="artworkDetail.name === 'Dogs'">
+          <img
+            class="img-fluid width:90%"
+            src="{{ artworkDetail.images[0].source }}"
+            alt="{{ artworkDetail.name }}"
+          />
+        </div>
+        <div *ngIf="artworkDetail.name !== 'Dogs'">
+          <img
+            class="img-fluid width:90%"
+            src="{{ artworkDetail.images[1].source }}"
+            alt="{{ artworkDetail.name }}"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col mb-5">
+      <dl>
+        <dt i18n>Artist</dt>
+        <!-- <dd>{{ artworkDetail.artist.name }}</dd> -->
+        <dt i18n>Type</dt>
+        <dd>{{ artworkDetail.type }}</dd>
+        <dt i18n>Year</dt>
+        <dd>{{ artworkDetail.year }}</dd>
+        <dt i18n class="bold">Description</dt>
+        <dd>
+          <p class="textCSS">{{ artworkDetail.description }}</p>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+<div class="container d-flex justify-content-center my-5">
+  <button
+    i18n
+    type="button"
+    class="btn btn-outline-secondary"
+    routerLink="/artworks/list"
+  >
+    All Artworks Section
+  </button>
+</div>

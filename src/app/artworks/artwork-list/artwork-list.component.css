@@ -1,0 +1,11 @@
+/* This is css */
+.sizeImage {
+    width: 280px;
+    height: 280px;
+  }
+.titleArtwork {
+    padding-top: 100px;
+}
+.contentList {
+    padding-bottom: 180px;
+}

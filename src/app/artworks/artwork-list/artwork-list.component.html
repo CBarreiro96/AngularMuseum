@@ -1,0 +1,35 @@
+<h1 class="text-center mb-5 titleArtwork">Artworks</h1>
+<div class="container mb-3 contentList">
+  <div class="row d-flex justify-content-center">
+    <div
+      class="col d-flex justify-content-center"
+      *ngFor="let artwork of artworks"
+    >
+      <div class="card my-3">
+        <div *ngIf="artwork.name === 'Dogs'">
+          <a href="{{ 'artworks/' + artwork.id }}">
+            <img
+              src="{{ artwork.images[0].source }}"
+              class="card-img-bottom sizeImage"
+              alt="{{ artwork.name }}"
+              routerLink="artworks/{{ artwork.id }}"
+            />
+          </a>
+        </div>
+        <div *ngIf="artwork.name !== 'Dogs'">
+          <a href="{{ 'artworks/' + artwork.id }}">
+            <img
+              src="{{ artwork.images[1].source }}"
+              class="card-img-bottom sizeImage"
+              alt="{{ artwork.name }}"
+              routerLink="artworks/{{ artwork.id }}"
+            />
+          </a>
+        </div>
+        <p class="card-title text-dark text-center pt-3 badge text-wrap">
+          {{ artwork.name }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
