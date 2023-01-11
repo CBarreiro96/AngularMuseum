@@ -1,6 +1,6 @@
 import { Artwork } from "./artworks";
 import { Image } from '../image/image';
-import { Artist } from "./artist/artist";
+import { Artist } from "../artist/artist";
 
 export class ArtworkDetail extends Artwork {
   constructor(

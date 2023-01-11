@@ -1,5 +1,5 @@
 import { Image } from "../image/image";
-import { Artist } from "./artist/artist";
+import { Artist } from "../artist/artist";
 
 export class Artwork {
   id: number;

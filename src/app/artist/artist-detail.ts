@@ -1,6 +1,6 @@
 import { Artist } from './artist';
 import { Image } from 'src/app/image/image';
-import { Artwork } from '../artworks';
+import { Artwork } from '../artworks/artworks';
 
 export class ArtistDetail extends Artist {
   constructor(

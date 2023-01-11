@@ -1,3 +1,10 @@
 .contentDetail {
     margin-top: 50px;
 }
+.imagenStyle{
+    width: 450px;
+    height: 450px;
+}
+button {
+    margin-bottom: 150px;
+}

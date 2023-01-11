@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ArtworkModule } from './artworks/artworks.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
-import { ArtistModule } from './artworks/artist/artist.module';
+import { ArtistModule } from './artist/artist.module';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-import { Artwork } from "../artworks";
+import { Artwork } from "../artworks/artworks";
 import { Image } from 'src/app/image/image';
 
 export class Artist {

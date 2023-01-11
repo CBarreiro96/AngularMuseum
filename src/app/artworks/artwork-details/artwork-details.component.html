@@ -5,14 +5,14 @@
       <div class="thumb">
         <div *ngIf="artworkDetail.name === 'Dogs'">
           <img
-            class="img-fluid width:90%"
+            class="img-fluid imagenStyle"
             src="{{ artworkDetail.images[0].source }}"
             alt="{{ artworkDetail.name }}"
           />
         </div>
         <div *ngIf="artworkDetail.name !== 'Dogs'">
           <img
-            class="img-fluid width:90%"
+            class="img-fluid imagenStyle"
             src="{{ artworkDetail.images[1].source }}"
             alt="{{ artworkDetail.name }}"
           />
@@ -22,7 +22,7 @@
     <div class="col mb-5">
       <dl>
         <dt i18n>Artist</dt>
-        <!-- <dd>{{ artworkDetail.artist.name }}</dd> -->
+        <dd>{{ artworkDetail.artist.name }}</dd>
         <dt i18n>Type</dt>
         <dd>{{ artworkDetail.type }}</dd>
         <dt i18n>Year</dt>
