@@ -4,3 +4,4 @@ node_modules/.cli-ngcc/
 /.angular/cache/
 .angular/cache/
 /node_modules/.cli-ngcc/
+.angular/cache/13.3.10/angular-webpack/
