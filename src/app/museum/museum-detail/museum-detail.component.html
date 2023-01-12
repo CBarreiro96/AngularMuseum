@@ -1,0 +1,129 @@
+<div class="container" id="container-museum-detail" *ngIf="museumDetail">
+  <p *ngIf="!openDirectly" class="h3 p-3">{{ museumDetail.name }}</p>
+  <h1 *ngIf="openDirectly" class="p-3">{{ museumDetail.name }}</h1>
+  <div class="row">
+    <div class="col-4">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ museumDetail.image.source }}"
+          alt="{{ museumDetail.image.altText }}"
+        />
+      </div>
+      <div class="details my-3">
+        <dl>
+          <dt i18n class="caption">Description</dt>
+          <dd>{{ museumDetail.description }}</dd>
+          <dt i18n class="caption">City</dt>
+          <dd>{{ museumDetail.city }}</dd>
+          <dt i18n class="caption">Address</dt>
+          <dd>
+            {{ museumDetail.address }}
+          </dd>
+          <dt i18n>See on Google Maps</dt>
+          <dd>
+            <a
+              i18n
+              href="{{
+                'https://www.google.com/maps/search/?api=1&query=' +
+                  museumDetail.address +
+                  ', ' +
+                  museumDetail.city
+              }}"
+              target="_blank"
+              >Click here</a
+            >
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="col-8">
+      <dl>
+        <dt i18n>Artworks</dt>
+        <dd>
+          <div class="accordion" id="accordionContainerArtworks">
+            <div
+              class="accordion-item"
+              *ngFor="let artwork of museumDetail.artworks; index as i"
+            >
+              <h2 class="accordion-header" [id]="'heading-artwork-' + i + 1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#collapse-artwork-' + i + 1"
+                  aria-expanded="false"
+                  [attr.aria-controls]="'collapse-artwork-' + i + 1"
+                >
+                  {{
+                    artwork.name + " - " + artwork.type + " - " + artwork.year
+                  }}
+                </button>
+              </h2>
+              <div
+                [id]="'collapse-artwork-' + i + 1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionContainerArtworks"
+              >
+                <div class="accordion-body">
+                  {{ artwork.description }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </dd>
+        <dd>
+          <a
+            i18n
+            routerLinkActive="router-link-active"
+            class="btn btn-primary"
+          >
+            See artworks
+          </a>
+        </dd>
+        <!-- <dt i18n class="my-4">Exhibitions</dt>
+        <dd>
+          <div class="accordion" id="accordionContainerExhibitions">
+            <div
+              class="accordion-item"
+              *ngFor="let exhibition of museumDetail.exhibitions; index as i"
+            >
+              <h2 class="accordion-header" [id]="'heading' + i + 1">
+                <button
+                  class="accordion-button collapsed"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  [attr.data-bs-target]="'#collapse' + i + 1"
+                  aria-expanded="false"
+                  [attr.aria-controls]="'collapse' + i + 1"
+                >
+                  {{ exhibition.name }}
+                </button>
+              </h2>
+              <div
+                [id]="'collapse' + i + 1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionContainerExhibitions"
+              >
+                <div class="accordion-body">
+                  {{ exhibition.description }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </dd> -->
+        <dd>
+          <a
+            i18n
+
+            routerLinkActive="router-link-active"
+            class="btn btn-primary"
+            data-testid="exhibition-list"
+          >
+            See exhibitions
+          </a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>

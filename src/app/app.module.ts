@@ -5,9 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArtworkModule } from './artworks/artworks.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
 import { ArtistModule } from './artist/artist.module';
+import { MuseumModule } from './museum/museum.module';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,11 @@ import { ArtistModule } from './artist/artist.module';
     AppRoutingModule,
     HttpClientModule,
     ArtworkModule,
+    MuseumModule,
     NgbModule,
     LayoutModule,
     ArtistModule,
+    NgbAccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

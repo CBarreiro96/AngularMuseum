@@ -14,6 +14,7 @@ export class ArtistListComponent implements OnInit {
   getArtists(): void {
     this.artistService.getArtists().subscribe((artist) => {
       this.artists = artist;
+      
     });
   }
 

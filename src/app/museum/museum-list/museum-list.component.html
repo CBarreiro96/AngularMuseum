@@ -1,0 +1,59 @@
+<div class="container element">
+  <div class="row my-3">
+    <div class="col">
+      <h1 i18n class="fw-bold my-5">Our Museums</h1>
+      <p class="fs-5">
+        Curabitur molestie at sapien nec porttitor. Duis semper, massa non
+        consectetur efficitur, nunc justo mattis elit, non aliquet erat arcu in
+        metus. Cras molestie maximus sem id rhoncus.
+      </p>
+    </div>
+    <!-- <div class="row my-3">
+      <div class="col">
+        <button
+          i18n
+          routerLink="/museums/create"
+          class="btn btn-primary"
+          id="button-create-museum"
+        >
+          Create Museum
+        </button>
+      </div>
+    </div> -->
+  </div>
+  <div class="row my-3">
+    <div *ngIf="selected">
+      <app-museum-detail [museumDetail]="selectedMuseum"></app-museum-detail>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col p-3" *ngFor="let museum of museums; index as i">
+      <div
+        class="card"
+        style="max-width: 24rem"
+        [class]="
+          selected && selectedMuseum.id == museum.id ? 'border-primary' : ''
+        "
+        attr.data-test-id="museum-card-{{ i }}"
+      >
+        <img
+          class="card-img-top img-fluid"
+          [src]="museum.image.source"
+          [alt]="museum.name"
+          style="height: 240px"
+        />
+        <div class="card-body m-3">
+          <p class="card-title h5 fw-bold py-2">{{ museum.name }}</p>
+          <button
+            i18n
+            class="btn btn-primary"
+            (click)="onSelected(museum)"
+            attr.data-test-id="museum-card-button-{{ i }}"
+          >
+            Know More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
