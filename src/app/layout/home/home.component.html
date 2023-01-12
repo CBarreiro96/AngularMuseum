@@ -1,0 +1,70 @@
+<!--hero-->
+<section class="HeadersT">
+  <section>
+    <div class="caption zindex-dropdown">
+      <h1 data-testid="titulo" class="zindex-sticky">Museum website</h1>
+      
+      
+      <p i18n>
+        Museum offers a variety of locations, artist and movements to explore.
+        Join and discover an amazing artistic world.
+      </p>
+    </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img  src="https://media.cntraveler.com/photos/5dae0325b45cd80008161cf3/master/pass/MOMA-2019_IVRPHOTO-4373_ArtistChoice_HB_007-2-2000x1125.jpg" class="d-block imagenSize" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Tate_Modern_viewed_from_Thames_Pleasure_Boat_-_geograph.org.uk_-_307445.jpg" class="d-block imagenSize" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="https://static.mfah.com/images/main-campus-18.15829485354753099698.jpg?width=1680" class="d-block imagenSize" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          
+        </div>
+        <div class="carousel-item">
+          
+        </div>
+        <div class="carousel-item">
+          
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- <img id="banner" src="assets/home.jpg" alt="Photo of a museum" width="100%" /> -->
+  </section>
+
+  <app-museum-section></app-museum-section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 i18n class="my-5">Artists</h2>
+          <app-artist-section></app-artist-section>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
