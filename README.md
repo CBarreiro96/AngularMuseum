@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7. I used a public proyect of Andes university (Api consumption) like this ![BackMuseums](https://github.com/MISW-4104-Web/BackMuseums). Project that was carried out within the Master of Software Engineering at the Universidad de los Andes
 
-## Installation.
+## PreInstallation.
 
 ### Databases configuration
 1. Open Pgadmin in your computer and enter
@@ -41,12 +41,14 @@ npm install
 npm run start
 ```
 
-### project execution
+### Project API execution
 Go to the file Backmuseums and and run the API data to consume. Like this
 
 ```
 npm run start
 ```
+
+## Installation.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

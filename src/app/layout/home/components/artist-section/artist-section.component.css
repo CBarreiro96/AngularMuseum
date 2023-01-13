@@ -9,3 +9,6 @@
     color: #ff1717;
     cursor: pointer;
   }
+  .element{
+    z-index: 0;
+  }

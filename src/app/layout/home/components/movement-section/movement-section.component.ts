@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movement } from 'src/app/movement/movement';
+import { MovementService } from 'src/app/movement/movement.service';
 
 @Component({
   selector: 'app-movement-section',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovementSectionComponent implements OnInit {
 
-  constructor() { }
+  movements: Array<Movement> = [];
+  constructor(private movementService: MovementService) {}
+
+  getMovements(): void {
+    this.movementService. getMovements().subscribe((movement) => {
+      this.movements = movement;
+    });
+  }
 
   ngOnInit() {
+    this.getMovements();
   }
 
 }
