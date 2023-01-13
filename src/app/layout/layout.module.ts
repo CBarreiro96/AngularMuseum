@@ -8,6 +8,7 @@ import { ArtistSectionComponent } from './home/components/artist-section/artist-
 import { RouterModule } from '@angular/router';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
+import { MovementSectionComponent } from './home/components/movement-section/movement-section.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     MuseumSectionComponent,
     ArtistSectionComponent,
+    MovementSectionComponent
   ],
   declarations: [
     NavbarComponent,
@@ -29,6 +31,7 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     MuseumSectionComponent,
     ArtistSectionComponent,
+    MovementSectionComponent
   ]
 })
 export class LayoutModule { }

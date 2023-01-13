@@ -4,7 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation.
 
-## Api consuption
+### Databases configuration
+1. Open Pgadmin in your computer and enter
+2. Right click on the Databases node and select the Create > Database option and create a new database named modern-art-museum
+
+<img src="https://user-images.githubusercontent.com/66263776/212344471-77c6fe02-3b96-4031-ad36-12ca699a6fde.png">
+
+### Api consuption
 In the first time you need to clone the repository BackMuseum
 
 ```
@@ -35,7 +41,7 @@ npm install
 npm run start
 ```
 
-## project execution
+### project execution
 Go to the file Backmuseums and and run the API data to consume. Like this
 
 ```

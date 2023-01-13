@@ -5,3 +5,7 @@
   .Cursor {
     cursor: pointer;
   }
+  .TitleArtist:hover {
+    color: #ff1717;
+    cursor: pointer;
+  }
