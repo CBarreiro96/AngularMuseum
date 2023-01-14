@@ -1,3 +1,20 @@
-<p>
-  movement-list works!
-</p>
+<section class="element">
+  <div class="container d-flex justify-content-center contentDetail">
+    <div class="row align-self-center" >
+      <h1 class="h2 p-3">Movements</h1>
+      <div class="col-5">
+        <div class="thumb">
+          <div id="list-example" class="list-group elements" *ngFor="let movement of movements" >
+            <a class="list-group-item list-group-item-action" (click)="onSelected(movement)" >{{movement.name}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5" *ngIf="selected">
+        <app-movement-detail [movementDetail]="selectedMovement"></app-movement-detail>
+      </div>
+      <div class="col mb-5" *ngIf="!selected">
+        <img src="https://www.venelogia.com/uploads/2012/movimientos-artisticos.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>

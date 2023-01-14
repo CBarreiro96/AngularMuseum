@@ -9,6 +9,7 @@ import { NgbAccordionModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
 import { ArtistModule } from './artist/artist.module';
 import { MuseumModule } from './museum/museum.module';
+import { MovementModule } from './movement/movement.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MuseumModule } from './museum/museum.module';
     HttpClientModule,
     ArtworkModule,
     MuseumModule,
+    MovementModule,
     NgbModule,
     LayoutModule,
     ArtistModule,

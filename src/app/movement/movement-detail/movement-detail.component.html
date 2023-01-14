@@ -1,0 +1,13 @@
+<section class="element">
+    <h2 class="h2 p-3">{{movementDetail.name}}</h2>
+    <div class="col mb-5">
+      <dl>
+        <dt i18n>Artist</dt>
+        <dd class="my-4"><li *ngFor="let item of movementDetail.artists">{{item.name}}</li></dd>
+        <dt i18n>Cuntry Origin</dt>
+        <dd class="my-3">{{movementDetail.countryOfOrigin}}</dd>
+        <dt i18n>Description</dt>
+        <dd class="description my-3">{{movementDetail.description}}</dd>
+      </dl>
+    </div>
+</section>

@@ -1,11 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MovementComponent } from './movement.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MovementListComponent } from './movement-list/movement-list.component';
+import { MovementRoutingModule } from './movement-routing.module';
+import { MovementDetailComponent } from './movement-detail/movement-detail.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    MovementRoutingModule
   ],
-  declarations: [MovementComponent]
+  exports: [
+    MovementListComponent,
+    MovementDetailComponent
+  ],
+  declarations: [
+    MovementListComponent,
+    MovementDetailComponent
+  ]
 })
 export class MovementModule { }
