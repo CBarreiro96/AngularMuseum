@@ -4,7 +4,7 @@
       <h1 class="h2 p-3">Movements</h1>
       <div class="col-5">
         <div class="thumb">
-          <div id="list-example" class="list-group elements" *ngFor="let movement of movements" >
+          <div id="list-{{i}}" class="list-group elements" *ngFor="let movement of movements; index as i" >
             <a class="list-group-item list-group-item-action" (click)="onSelected(movement)" >{{movement.name}}</a>
           </div>
         </div>
