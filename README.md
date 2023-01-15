@@ -72,5 +72,5 @@ ng serve --open
 
 ## Others Information
 
-* [Accessibility in the project](https://github.com/CBarreiro96/AngularMuseum/wiki)
+* [Accessibility in the project](https://github.com/CBarreiro96/AngularMuseum/wiki/Accessibility-in-the-project)
 * [project visualization]()
