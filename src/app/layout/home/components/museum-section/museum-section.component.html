@@ -8,18 +8,20 @@
       </div>
     </div>
     <div class="row my-3">
-      <div class="col p-3" *ngFor="let museum of museums; index as i">
+      <div class="col p-3"  *ngFor="let museum of museums; index as i">
         <div
           class="card"
-          style="max-width: 24rem"
+          style="max-width: 18rem; height: 400px;"
           attr.data-test-id="museum-card-{{ i }}"
         >
           <div class="card-body m-3">
-            <p class="card-title h5 fw-bold py-2">{{ museum.name }}</p>
+            <p class="card-title h6 fw-bold py-2">{{ museum.name }}</p>
             <p class="card-text">
-              <small class="text-muted">{{
-                museum.city + ", " + museum.address
+              <small >{{
+                museum.city + ", "
               }}</small>
+              <br>
+              <small class="text-muted">{{museum.address}}</small>
             </p>
             <button
               i18n
@@ -35,7 +37,7 @@
             class="card-img-bottom img-fluid"
             [src]="museum.image.source"
             [alt]="museum.name"
-            style="height: 240px"
+            style="height: 180px; width: 18rem;"
           />
         </div>
       </div>

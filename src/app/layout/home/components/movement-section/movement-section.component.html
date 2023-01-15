@@ -9,7 +9,7 @@
           {{movement.name}}
         </button>
       </h2>
-      <div id="{{ 'collapse' + i }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div id="{{ 'collapse' + i }}" class="accordion-collapse collapse" [attr.aria-labelledby]="'movement' + i " data-bs-parent="#accordionExample">
         <div class="accordion-body">
           {{movement.description}}
         </div>
