@@ -1,0 +1,180 @@
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-6 col-sm-8">
+        <div class="container mt-4">
+          <h1 class="text-center" i18n>Create a new Artist</h1>
+          <form
+            [formGroup]="artistForm"
+            (ngSubmit)="!artistForm.invalid && createArtist(artistForm.value)"
+          >
+            <!--Name-->
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="name" i18n>Name</label>
+              <input
+                novalidate
+                id="name"
+                class="form-control"
+                formControlName="name"
+                placeholder="Name"
+              />
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  artistForm.get('name')!.hasError('required') &&
+                  artistForm.get('name')!.touched
+                "
+              >
+                Name required
+              </div>
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="artistForm.get('name')!.hasError('minlength')"
+              >
+                Name too short
+              </div>
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="artistForm.get('name')!.hasError('minlength')"
+              >
+                Name too long
+              </div>
+            </div>
+
+            <!--birthdate-->
+            <div class="form-group mx-sm-3 mb-2">
+              <label i18n for="birthdate">BirthDate</label>
+              <input
+                id="birthdate"
+                type="date"
+                class="form-control"
+                formControlName="birthdate"
+                placeholder="Artist's birthdate"
+              />
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  artistForm.get('birthdate')!.hasError('required') &&
+                  artistForm.get('birthdate')!.touched
+                "
+              >
+                birthdate required
+              </div>
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="artistForm.get('birthdate')!.hasError('minlength')"
+              >
+                birthdate too short
+              </div>
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="artistForm.get('birthdate')!.hasError('maxlength')"
+              >
+                birthdate too long
+              </div>
+            </div>
+
+            <!--birthplace-->
+            <div class="form-group mx-sm-3 mb-2">
+              <label i18n for="birthplace">Birthplace</label>
+              <input
+                novalidate
+                id="birthplace"
+                class="form-control"
+                formControlName="birthplace"
+                placeholder="birthplace"
+              />
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  artistForm.get('birthplace')!.hasError('required') &&
+                  artistForm.get('birthplace')!.touched
+                "
+              >
+                Birthplace required
+              </div>
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="artistForm.get('birthplace')!.hasError('minlength')"
+              >
+                Birthplace too short
+              </div>
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="artistForm.get('birthplace')!.hasError('maxlength')"
+              >
+                Birthplace too long
+              </div>
+            </div>
+
+            <!--Image-->
+            <div class="form-group mx-sm-3 mb-2">
+              <label i18n>Select an image</label>
+              <div class="container horizontal-scrollable">
+                <div class="row text-center">
+                  <div class="col">
+                    <label *ngFor="let image of images; index as i" class="mx-2">
+                      <input
+                        type="radio"
+                        name="image"
+                        [value]="{ id: image.id }"
+                        checked
+                        formControlName="image"
+                      />
+                      <img
+                        [src]="image.source"
+                        [alt]="image.altText"
+                        class="img-fluid"
+                        max-height="200"
+                        width="200"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div
+                i18n
+                class="alert alert-danger alert-dismissible fade show"
+                *ngIf="
+                  artistForm.get('image')!.hasError('required') &&
+                  artistForm.get('image')!.touched
+                "
+              >
+                Image required
+              </div>
+            </div>
+
+            <div class="mx-sm-3 mb-2">
+              <button
+                i18n
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="!artistForm.valid"
+              >
+                Create
+              </button>
+              <button
+                i18n
+                type="button"
+                class="btn btn-danger mx-3"
+                (click)="cancelCreation()"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

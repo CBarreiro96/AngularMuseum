@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { ArtistRoutingModule } from './artist-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ArtistCreateComponent } from './artist-create/artist-create.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   exports: [ArtistListComponent],
   declarations: [
     ArtistListComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    ArtistCreateComponent
   ]
 })
 export class ArtistModule { }

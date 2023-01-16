@@ -1,0 +1,16 @@
+<div class="container horizontal-scrollable">
+  <div class="row text-center">
+    <div class="col">
+      <label *ngFor="let image of images; index as i" class="mx-2">
+        <input type="radio" name="image" value="small" checked />
+        <img
+          [src]="image.source"
+          [alt]="image.altText"
+          class="img-fluid"
+          max-height="200"
+          width="200"
+        />
+      </label>
+    </div>
+  </div>
+</div>

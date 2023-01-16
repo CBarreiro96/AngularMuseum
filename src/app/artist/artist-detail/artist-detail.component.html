@@ -1,3 +1,103 @@
-<p>
-  artist-detail works!
-</p>
+<section class="elements">
+  <div class="container d-flex justify-content-center">
+    <div class="row align-self-center">
+      <h1 class="h1 p-3">{{ artistDetail.name }}</h1>
+      <div class="col-5">
+        <div class="thumb">
+          <img
+            class="img-fluid sizeImage"
+            src="{{ artistDetail.image.source }}"
+            alt="{{ artistDetail.name }}"
+          />
+        </div>
+      </div>
+      <div class="col mb-5" style="z-index: 0;">
+        <dl>
+          <dt i18n class="mb-2">Birthplace</dt>
+          <dd>{{ artistDetail.birthplace }}</dd>
+          <dt i18n class="mb-2">Artworks</dt>
+          <dd>
+            <div class="accordion" id="accordionContainerArtworks">
+              <div
+                class="accordion-item"
+                *ngFor="let artwork of artistDetail.artworks; index as i"
+              >
+                <h2 class="accordion-header" [id]="'heading-artwork-' + i + 1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#collapse-artwork-' + i + 1"
+                    aria-expanded="false"
+                    [attr.aria-controls]="'collapse-artwork-' + i + 1"
+                  >
+                    {{ artwork.name }}
+                  </button>
+                </h2>
+                <div
+                  [id]="'collapse-artwork-' + i + 1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionContainerArtworks"
+                >
+                  <div class="accordion-body">
+                    <strong i18n>Year: </strong>{{ artwork.year }}<br />
+                    <hr />
+                    <strong i18n>Type: </strong>{{ artwork.type }}<br />
+                    <hr />
+                    <strong i18n>Description</strong><br />
+                    <p class="forms">{{ artwork.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </dd>
+          <dt i18n class="mb-2">Movements</dt>
+          <dd>
+            <div class="accordion" id="accordionContainerMovements">
+              <div
+                class="accordion-item"
+                *ngFor="let movements of artistDetail.movements; index as i"
+              >
+                <h2 class="accordion-header" [id]="'heading-movement-' + i + 1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#collapse-movement-' + i + 1"
+                    aria-expanded="false"
+                    [attr.aria-controls]="'collapse-movement-' + i + 1"
+                  >
+                    {{ movements.name }}
+                  </button>
+                </h2>
+                <div
+                  [id]="'collapse-movement-' + i + 1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionContainerMovements"
+                >
+                  <div class="accordion-body">
+                    <strong i18n>Year: </strong>{{ movements.countryOfOrigin
+                    }}<br />
+                    <hr />
+                    <strong i18n>Description</strong><br />
+                    <p class="forms">{{ movements.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex justify-content-center mt-5">
+    <button
+      i18n
+      type="button"
+      class="btn btn-outline-secondary"
+      routerLink="/artists/list"
+    >
+      Artist Section
+    </button>
+  </div>
+</section>
