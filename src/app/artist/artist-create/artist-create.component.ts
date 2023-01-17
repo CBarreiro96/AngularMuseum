@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+
 import { ImageService } from 'src/app/image/image.service';
 import { Artist } from '../artist';
 import { ArtistsService } from '../artist.service';
 import { Image } from '../../image/image';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-artist-create',
